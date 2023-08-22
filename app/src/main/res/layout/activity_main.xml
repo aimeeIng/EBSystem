@@ -12,10 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="#283747">
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="10dp"
+            android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent">
 
             <ImageView
@@ -25,26 +26,15 @@
                 android:src="@drawable/ic_airplane"
                 android:layout_marginEnd="20dp"/>
             <TextView
-                android:id="@+id/ttl1"
+                android:id="@+id/ttl"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:text="Outbound Flights to Las Vegas"
+                android:text="Electricity Billing System"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:textSize="16sp"
-                app:layout_constraintStart_toEndOf="@+id/icon"/>
-            <TextView
-                android:id="@+id/ttl2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1 Traveler, Wednesday, April 9, 2014"
-                android:textSize="14sp"
-                android:textColor="@color/white"
-                app:layout_constraintTop_toBottomOf="@+id/ttl1"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/ttl1"/>
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                android:textSize="20sp"/>
+
+        </LinearLayout>
     </com.google.android.material.appbar.MaterialToolbar>
 
     <ImageView
@@ -60,13 +50,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="-430dp">
+        android:layout_marginTop="-530dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:text="Select a flight to las vegas"
+            android:text="Get Your Bill Detail"
             android:textSize="20sp"
             android:textColor="@color/white"
             android:textAllCaps="true"/>
@@ -78,13 +68,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
                 android:orientation="vertical">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="80dp"
-                    app:cardCornerRadius="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="10dp"
                     android:layout_marginTop="8dp"
                     app:layout_constraintStart_toStartOf="parent">
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -99,142 +90,127 @@
                             android:id="@+id/ttl1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Delta"
+                            android:text="Mar,2019"
                             android:textStyle="bold"
                             android:textColor="@color/black"
                             android:textSize="14sp"/>
-                        <TextView
-                            android:id="@+id/time"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="6:50AM"
-                            android:layout_marginTop="10dp"
-                            android:textColor="@color/black"
-                            app:layout_constraintTop_toBottomOf="@+id/ttl1"
-                            android:textSize="14sp"/>
-
-                        <TextView
-                            android:id="@+id/o1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="o"
-                            android:textStyle="bold"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginStart="30dp"
-                            android:textColor="#295682"
-                            app:layout_constraintStart_toEndOf="@+id/time"
-                            app:layout_constraintTop_toBottomOf="@+id/ttl1"
-                            android:textSize="18sp"/>
-                        <TextView
-                            android:id="@+id/ttlo1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="YYZ"
-                            android:layout_marginTop="-5dp"
-                            app:layout_constraintStart_toStartOf="@+id/o1"
-                            app:layout_constraintTop_toBottomOf="@+id/o1"
-                            android:textSize="8sp"/>
-
-                        <TextView
-                            android:id="@+id/l1"
-                            android:layout_width="40dp"
-                            android:layout_height="wrap_content"
-                            android:text="__"
-                            android:textStyle="bold"
-                            android:layout_marginTop="0dp"
-                            android:layout_marginStart="-2dp"
-                            android:textColor="#295682"
-                            app:layout_constraintStart_toEndOf="@+id/o1"
-                            app:layout_constraintTop_toBottomOf="@+id/ttl1"
-                            android:textSize="18sp"/>
-                        <TextView
-                            android:id="@+id/o2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="o"
-                            android:textStyle="bold"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginStart="-25dp"
-                            android:textColor="#295682"
-                            app:layout_constraintStart_toEndOf="@+id/l1"
-                            app:layout_constraintTop_toBottomOf="@+id/ttl1"
-                            android:textSize="18sp"/>
-
-                        <TextView
-                            android:id="@+id/ttlo2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="CYG"
-                            android:layout_marginTop="-5dp"
-                            app:layout_constraintStart_toStartOf="@+id/o2"
-                            app:layout_constraintTop_toBottomOf="@+id/o2"
-                            android:textSize="8sp"/>
-
-                        <TextView
-                            android:id="@+id/l2"
-                            android:layout_width="40dp"
-                            android:layout_height="wrap_content"
-                            android:text="___"
-                            android:textStyle="bold"
-                            android:layout_marginTop="0dp"
-                            android:layout_marginStart="-2dp"
-                            android:textColor="#295682"
-                            app:layout_constraintStart_toEndOf="@+id/o2"
-                            app:layout_constraintTop_toBottomOf="@+id/ttl1"
-                            android:textSize="18sp"/>
-                        <TextView
-                            android:id="@+id/o3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="o"
-                            android:textStyle="bold"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginStart="-18dp"
-                            android:textColor="#295682"
-                            app:layout_constraintStart_toEndOf="@+id/l2"
-                            app:layout_constraintTop_toBottomOf="@+id/ttl1"
-                            android:textSize="18sp"/>
-                        <TextView
-                            android:id="@+id/ttlo3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="LAS"
-                            android:layout_marginTop="-5dp"
-                            app:layout_constraintStart_toStartOf="@+id/o3"
-                            app:layout_constraintTop_toBottomOf="@+id/o3"
-                            android:textSize="8sp"/>
-
                         <TextView
                             android:id="@+id/frw"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="270dp"
-                            android:layout_marginEnd="50dp"
+                            android:layout_marginStart="240dp"
+                            android:layout_marginEnd="10dp"
                             android:text="$541"
                             android:textStyle="bold"
-                            android:gravity="center_horizontal"
                             android:textColor="#295682"
                             app:layout_constraintStart_toEndOf="@+id/ttl1"
                             android:textSize="14sp"/>
                         <TextView
-                            android:id="@+id/time2"
+                            android:id="@+id/line1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="10:44AM "
-                            android:layout_marginTop="10dp"
-                            android:layout_marginStart="-10dp"
-                            android:textColor="@color/black"
-                            app:layout_constraintStart_toStartOf="@+id/frw"
-                            app:layout_constraintTop_toBottomOf="@+id/frw"
+                            android:text="______________________________________________________"
+                            android:textStyle="bold"
+                            android:layout_marginTop="-7dp"
+                            app:layout_constraintTop_toBottomOf="@+id/ttl1"
+                            app:layout_constraintStart_toStartOf="@+id/ttl1"
                             android:textSize="14sp"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintTop_toBottomOf="@+id/line1"
+                            >
 
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Bill number"
+                                    android:layout_marginTop="10dp"
+                                    android:textSize="16sp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/due_date"
+                                    android:layout_marginStart="180dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="30dp"
+                                    android:textSize="16sp"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="201832479"
+                                    android:layout_marginTop="1dp"
+                                    android:textSize="12sp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="09/04/2019"
+                                    android:layout_marginStart="200dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginEnd="30dp"
+                                    android:textSize="12sp"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Used Unit"
+                                    android:layout_marginTop="12dp"
+                                    android:textSize="16sp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Status"
+                                    android:layout_marginStart="200dp"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_marginEnd="30dp"
+                                    android:textSize="16sp"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="50"
+                                    android:layout_marginTop="1dp"
+                                    android:textSize="12sp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="pending"
+                                    android:layout_marginStart="260dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginEnd="30dp"
+                                    android:textSize="12sp"/>
+                            </LinearLayout>
+                        </LinearLayout>
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="80dp"
-                    app:cardCornerRadius="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="10dp"
                     android:layout_marginTop="8dp"
                     app:layout_constraintStart_toStartOf="parent">
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -246,183 +222,132 @@
                         app:layout_constraintBottom_toBottomOf="parent">
 
                         <TextView
-                            android:id="@+id/ttl21"
+                            android:id="@+id/ttl2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="United"
+                            android:text="Mar,2019"
                             android:textStyle="bold"
                             android:textColor="@color/black"
                             android:textSize="14sp"/>
-                        <TextView
-                            android:id="@+id/time21"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="2:22PM"
-                            android:layout_marginTop="10dp"
-                            android:textColor="@color/black"
-                            app:layout_constraintTop_toBottomOf="@+id/ttl21"
-                            android:textSize="14sp"/>
-
-                        <TextView
-                            android:id="@+id/o21"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="o"
-                            android:textStyle="bold"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginStart="80dp"
-                            android:textColor="#295682"
-                            app:layout_constraintStart_toEndOf="@+id/time21"
-                            app:layout_constraintTop_toBottomOf="@+id/ttl21"
-                            android:textSize="18sp"/>
-                        <TextView
-                            android:id="@+id/ttlo21"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="YYZ"
-                            android:layout_marginTop="-5dp"
-                            app:layout_constraintStart_toStartOf="@+id/o21"
-                            app:layout_constraintTop_toBottomOf="@+id/o21"
-                            android:textSize="8sp"/>
-
-                        <TextView
-                            android:id="@+id/l21"
-                            android:layout_width="40dp"
-                            android:layout_height="wrap_content"
-                            android:text="__"
-                            android:textStyle="bold"
-                            android:layout_marginTop="0dp"
-                            android:layout_marginStart="-2dp"
-                            android:textColor="#295682"
-                            app:layout_constraintStart_toEndOf="@+id/o21"
-                            app:layout_constraintTop_toBottomOf="@+id/ttl21"
-                            android:textSize="18sp"/>
-                        <TextView
-                            android:id="@+id/o22"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="("
-                            android:textStyle="bold"
-                            android:layout_marginTop="13dp"
-                            android:layout_marginStart="-25dp"
-                            android:textColor="#295682"
-                            app:layout_constraintStart_toEndOf="@+id/l21"
-                            app:layout_constraintTop_toBottomOf="@+id/ttl21"
-                            android:textSize="10sp"/>
-
-                        <TextView
-                            android:id="@+id/tl21"
-                            android:layout_width="40dp"
-                            android:layout_height="wrap_content"
-                            android:text="__"
-                            android:textStyle="bold"
-                            android:layout_marginTop="-3dp"
-                            android:layout_marginStart="-1dp"
-                            android:textColor="#295682"
-                            app:layout_constraintStart_toEndOf="@+id/o22"
-                            app:layout_constraintTop_toBottomOf="@+id/ttl21"
-                            android:textSize="18sp"/>
-
-                        <TextView
-                            android:id="@+id/bl21"
-                            android:layout_width="40dp"
-                            android:layout_height="wrap_content"
-                            android:text="__"
-                            android:textStyle="bold"
-                            android:layout_marginTop="-23dp"
-                            android:layout_marginStart="-1dp"
-                            android:textColor="#295682"
-                            app:layout_constraintStart_toEndOf="@+id/o22"
-                            app:layout_constraintTop_toBottomOf="@+id/o22"
-                            android:textSize="18sp"/>
-
-                        <TextView
-                            android:id="@+id/oel21"
-                            android:layout_width="40dp"
-                            android:layout_height="wrap_content"
-                            android:text=")"
-                            android:textStyle="bold"
-                            android:layout_marginTop="-8.5dp"
-                            android:layout_marginStart="-26dp"
-                            android:textColor="#295682"
-                            app:layout_constraintStart_toEndOf="@+id/bl21"
-                            app:layout_constraintTop_toBottomOf="@+id/tl21"
-                            android:textSize="10sp"/>
-
-                        <TextView
-                            android:id="@+id/ttlo22"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="CYG"
-                            android:layout_marginTop="-2dp"
-                            app:layout_constraintStart_toStartOf="@+id/o22"
-                            app:layout_constraintTop_toBottomOf="@+id/o22"
-                            android:textSize="8sp"/>
-
-                        <TextView
-                            android:id="@+id/l22"
-                            android:layout_width="40dp"
-                            android:layout_height="wrap_content"
-                            android:text="___"
-                            android:textStyle="bold"
-                            android:layout_marginTop="0dp"
-                            android:layout_marginStart="-38dp"
-                            android:textColor="#295682"
-                            app:layout_constraintStart_toEndOf="@+id/oel21"
-                            app:layout_constraintTop_toBottomOf="@+id/ttl21"
-                            android:textSize="18sp"/>
-                        <TextView
-                            android:id="@+id/o23"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="o"
-                            android:textStyle="bold"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginStart="-18dp"
-                            android:textColor="#295682"
-                            app:layout_constraintStart_toEndOf="@+id/l22"
-                            app:layout_constraintTop_toBottomOf="@+id/ttl21"
-                            android:textSize="18sp"/>
-                        <TextView
-                            android:id="@+id/ttlo23"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="LAS"
-                            android:layout_marginTop="-5dp"
-                            app:layout_constraintStart_toStartOf="@+id/o23"
-                            app:layout_constraintTop_toBottomOf="@+id/o23"
-                            android:textSize="8sp"/>
-
                         <TextView
                             android:id="@+id/frw2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="270dp"
-                            android:layout_marginEnd="50dp"
-                            android:text="$542"
+                            android:layout_marginStart="240dp"
+                            android:layout_marginEnd="10dp"
+                            android:text="$541"
                             android:textStyle="bold"
-                            android:gravity="center_horizontal"
                             android:textColor="#295682"
-                            app:layout_constraintStart_toEndOf="@+id/ttl21"
+                            app:layout_constraintStart_toEndOf="@+id/ttl2"
                             android:textSize="14sp"/>
                         <TextView
-                            android:id="@+id/time22"
+                            android:id="@+id/line2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="8:31PM "
-                            android:layout_marginTop="10dp"
-                            android:layout_marginStart="-10dp"
-                            android:textColor="@color/black"
-                            app:layout_constraintStart_toStartOf="@+id/frw2"
-                            app:layout_constraintTop_toBottomOf="@+id/frw2"
+                            android:text="______________________________________________________"
+                            android:textStyle="bold"
+                            android:layout_marginTop="-7dp"
+                            app:layout_constraintTop_toBottomOf="@+id/ttl2"
+                            app:layout_constraintStart_toStartOf="@+id/ttl2"
                             android:textSize="14sp"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintTop_toBottomOf="@+id/line2"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Bill number"
+                                    android:layout_marginTop="10dp"
+                                    android:textSize="16sp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/due_date"
+                                    android:layout_marginStart="180dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="30dp"
+                                    android:textSize="16sp"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="201832479"
+                                    android:layout_marginTop="1dp"
+                                    android:textSize="12sp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="09/04/2019"
+                                    android:layout_marginStart="200dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginEnd="30dp"
+                                    android:textSize="12sp"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Used Unit"
+                                    android:layout_marginTop="12dp"
+                                    android:textSize="16sp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Status"
+                                    android:layout_marginStart="200dp"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_marginEnd="30dp"
+                                    android:textSize="16sp"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="50"
+                                    android:layout_marginTop="1dp"
+                                    android:textSize="12sp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="pending"
+                                    android:layout_marginStart="260dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginEnd="30dp"
+                                    android:textSize="12sp"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
+
                 <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="80dp"
-                    app:cardCornerRadius="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="10dp"
                     android:layout_marginTop="8dp"
                     app:layout_constraintStart_toStartOf="parent">
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -434,408 +359,264 @@
                         app:layout_constraintBottom_toBottomOf="parent">
 
                         <TextView
-                            android:id="@+id/ttl31"
+                            android:id="@+id/ttl3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="WestJet"
+                            android:text="Mar,2019"
                             android:textStyle="bold"
                             android:textColor="@color/black"
                             android:textSize="14sp"/>
-                        <TextView
-                            android:id="@+id/time3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="8:50PM"
-                            android:layout_marginTop="10dp"
-                            android:textColor="@color/black"
-                            app:layout_constraintTop_toBottomOf="@+id/ttl31"
-                            android:textSize="14sp"/>
-
-                        <TextView
-                            android:id="@+id/o31"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="o"
-                            android:textStyle="bold"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginStart="140dp"
-                            android:textColor="#295682"
-                            app:layout_constraintStart_toEndOf="@+id/time3"
-                            app:layout_constraintTop_toBottomOf="@+id/ttl31"
-                            android:textSize="18sp"/>
-                        <TextView
-                            android:id="@+id/ttlo31"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="YYZ"
-                            android:layout_marginTop="-5dp"
-                            app:layout_constraintStart_toStartOf="@+id/o31"
-                            app:layout_constraintTop_toBottomOf="@+id/o31"
-                            android:textSize="8sp"/>
-
-                        <TextView
-                            android:id="@+id/l31"
-                            android:layout_width="40dp"
-                            android:layout_height="wrap_content"
-                            android:text="____"
-                            android:textStyle="bold"
-                            android:layout_marginTop="0dp"
-                            android:layout_marginStart="-2dp"
-                            android:textColor="#295682"
-                            app:layout_constraintStart_toEndOf="@+id/o31"
-                            app:layout_constraintTop_toBottomOf="@+id/ttl31"
-                            android:textSize="18sp"/>
-                        <TextView
-                            android:id="@+id/o32"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="o"
-                            android:textStyle="bold"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginStart="-10dp"
-                            android:textColor="#295682"
-                            app:layout_constraintStart_toEndOf="@+id/l31"
-                            app:layout_constraintTop_toBottomOf="@+id/ttl31"
-                            android:textSize="18sp"/>
-
-                        <TextView
-                            android:id="@+id/ttlo32"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="CYG"
-                            android:layout_marginTop="-5dp"
-                            app:layout_constraintStart_toStartOf="@+id/o32"
-                            app:layout_constraintTop_toBottomOf="@+id/o32"
-                            android:textSize="8sp"/>
-
-
                         <TextView
                             android:id="@+id/frw3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="250dp"
-                            android:layout_marginEnd="50dp"
-                            android:text="$567"
-                            android:textStyle="bold"
-                            android:gravity="center_horizontal"
-                            android:textColor="#295682"
-                            app:layout_constraintStart_toEndOf="@+id/ttl31"
-                            android:textSize="14sp"/>
-                        <TextView
-                            android:id="@+id/time32"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="10:40PM "
-                            android:layout_marginTop="10dp"
-                            android:layout_marginStart="-10dp"
-                            android:textColor="@color/black"
-                            app:layout_constraintStart_toStartOf="@+id/frw3"
-                            app:layout_constraintTop_toBottomOf="@+id/frw3"
-                            android:textSize="14sp"/>
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="80dp"
-                    app:cardCornerRadius="4dp"
-                    android:layout_marginTop="8dp"
-                    app:layout_constraintStart_toStartOf="parent">
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="10dp"
-                        android:paddingBottom="5dp"
-                        android:layout_marginStart="10dp"
-                        app:layout_constraintBottom_toBottomOf="parent">
-
-                        <TextView
-                            android:id="@+id/ttl41"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Air Canada"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"
-                            android:textSize="14sp"/>
-                        <TextView
-                            android:id="@+id/time4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="6:50AM"
-                            android:layout_marginTop="10dp"
-                            android:textColor="@color/black"
-                            app:layout_constraintTop_toBottomOf="@+id/ttl41"
-                            android:textSize="14sp"/>
-
-                        <TextView
-                            android:id="@+id/o41"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="o"
-                            android:textStyle="bold"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginStart="70dp"
-                            android:textColor="#295682"
-                            app:layout_constraintStart_toEndOf="@+id/time4"
-                            app:layout_constraintTop_toBottomOf="@+id/ttl41"
-                            android:textSize="18sp"/>
-                        <TextView
-                            android:id="@+id/ttlo41"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="YYZ"
-                            android:layout_marginTop="-5dp"
-                            app:layout_constraintStart_toStartOf="@+id/o41"
-                            app:layout_constraintTop_toBottomOf="@+id/o41"
-                            android:textSize="8sp"/>
-
-                        <TextView
-                            android:id="@+id/l41"
-                            android:layout_width="40dp"
-                            android:layout_height="wrap_content"
-                            android:text="__"
-                            android:textStyle="bold"
-                            android:layout_marginTop="0dp"
-                            android:layout_marginStart="-2dp"
-                            android:textColor="#295682"
-                            app:layout_constraintStart_toEndOf="@+id/o41"
-                            app:layout_constraintTop_toBottomOf="@+id/ttl41"
-                            android:textSize="18sp"/>
-                        <TextView
-                            android:id="@+id/o42"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="o"
-                            android:textStyle="bold"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginStart="-25dp"
-                            android:textColor="#295682"
-                            app:layout_constraintStart_toEndOf="@+id/l41"
-                            app:layout_constraintTop_toBottomOf="@+id/ttl41"
-                            android:textSize="18sp"/>
-
-                        <TextView
-                            android:id="@+id/ttlo42"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="CYG"
-                            android:layout_marginTop="-5dp"
-                            app:layout_constraintStart_toStartOf="@+id/o42"
-                            app:layout_constraintTop_toBottomOf="@+id/o42"
-                            android:textSize="8sp"/>
-
-                        <TextView
-                            android:id="@+id/l42"
-                            android:layout_width="40dp"
-                            android:layout_height="wrap_content"
-                            android:text="___"
-                            android:textStyle="bold"
-                            android:layout_marginTop="0dp"
-                            android:layout_marginStart="-2dp"
-                            android:textColor="#295682"
-                            app:layout_constraintStart_toEndOf="@+id/o42"
-                            app:layout_constraintTop_toBottomOf="@+id/ttl41"
-                            android:textSize="18sp"/>
-                        <TextView
-                            android:id="@+id/o43"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="o"
-                            android:textStyle="bold"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginStart="-18dp"
-                            android:textColor="#295682"
-                            app:layout_constraintStart_toEndOf="@+id/l42"
-                            app:layout_constraintTop_toBottomOf="@+id/ttl41"
-                            android:textSize="18sp"/>
-                        <TextView
-                            android:id="@+id/ttlo43"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="LAS"
-                            android:layout_marginTop="-5dp"
-                            app:layout_constraintStart_toStartOf="@+id/o43"
-                            app:layout_constraintTop_toBottomOf="@+id/o43"
-                            android:textSize="8sp"/>
-
-                        <TextView
-                            android:id="@+id/frw4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="230dp"
-                            android:layout_marginEnd="50dp"
-                            android:text="$568"
-                            android:textStyle="bold"
-                            android:gravity="center_horizontal"
-                            android:textColor="#295682"
-                            app:layout_constraintStart_toEndOf="@+id/ttl41"
-                            android:textSize="14sp"/>
-                        <TextView
-                            android:id="@+id/time42"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="10:44AM "
-                            android:layout_marginTop="10dp"
-                            android:layout_marginStart="-10dp"
-                            android:textColor="@color/black"
-                            app:layout_constraintStart_toStartOf="@+id/frw4"
-                            app:layout_constraintTop_toBottomOf="@+id/frw4"
-                            android:textSize="14sp"/>
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="80dp"
-                    app:cardCornerRadius="4dp"
-                    android:layout_marginTop="8dp"
-                    app:layout_constraintStart_toStartOf="parent">
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="10dp"
-                        android:paddingBottom="5dp"
-                        android:layout_marginStart="10dp"
-                        app:layout_constraintBottom_toBottomOf="parent">
-
-                        <TextView
-                            android:id="@+id/ttl41"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Delta"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"
-                            android:textSize="14sp"/>
-                        <TextView
-                            android:id="@+id/time4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="6:50AM"
-                            android:layout_marginTop="10dp"
-                            android:textColor="@color/black"
-                            app:layout_constraintTop_toBottomOf="@+id/ttl41"
-                            android:textSize="14sp"/>
-
-                        <TextView
-                            android:id="@+id/o41"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="o"
-                            android:textStyle="bold"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginStart="30dp"
-                            android:textColor="#295682"
-                            app:layout_constraintStart_toEndOf="@+id/time4"
-                            app:layout_constraintTop_toBottomOf="@+id/ttl41"
-                            android:textSize="18sp"/>
-                        <TextView
-                            android:id="@+id/ttlo41"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="YYZ"
-                            android:layout_marginTop="-5dp"
-                            app:layout_constraintStart_toStartOf="@+id/o41"
-                            app:layout_constraintTop_toBottomOf="@+id/o41"
-                            android:textSize="8sp"/>
-
-                        <TextView
-                            android:id="@+id/l41"
-                            android:layout_width="40dp"
-                            android:layout_height="wrap_content"
-                            android:text="__"
-                            android:textStyle="bold"
-                            android:layout_marginTop="0dp"
-                            android:layout_marginStart="-2dp"
-                            android:textColor="#295682"
-                            app:layout_constraintStart_toEndOf="@+id/o41"
-                            app:layout_constraintTop_toBottomOf="@+id/ttl41"
-                            android:textSize="18sp"/>
-                        <TextView
-                            android:id="@+id/o42"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="o"
-                            android:textStyle="bold"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginStart="-25dp"
-                            android:textColor="#295682"
-                            app:layout_constraintStart_toEndOf="@+id/l41"
-                            app:layout_constraintTop_toBottomOf="@+id/ttl41"
-                            android:textSize="18sp"/>
-
-                        <TextView
-                            android:id="@+id/ttlo42"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="CYG"
-                            android:layout_marginTop="-5dp"
-                            app:layout_constraintStart_toStartOf="@+id/o42"
-                            app:layout_constraintTop_toBottomOf="@+id/o42"
-                            android:textSize="8sp"/>
-
-                        <TextView
-                            android:id="@+id/l42"
-                            android:layout_width="40dp"
-                            android:layout_height="wrap_content"
-                            android:text="___"
-                            android:textStyle="bold"
-                            android:layout_marginTop="0dp"
-                            android:layout_marginStart="-2dp"
-                            android:textColor="#295682"
-                            app:layout_constraintStart_toEndOf="@+id/o42"
-                            app:layout_constraintTop_toBottomOf="@+id/ttl41"
-                            android:textSize="18sp"/>
-                        <TextView
-                            android:id="@+id/o43"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="o"
-                            android:textStyle="bold"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginStart="-18dp"
-                            android:textColor="#295682"
-                            app:layout_constraintStart_toEndOf="@+id/l42"
-                            app:layout_constraintTop_toBottomOf="@+id/ttl41"
-                            android:textSize="18sp"/>
-                        <TextView
-                            android:id="@+id/ttlo43"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="LAS"
-                            android:layout_marginTop="-5dp"
-                            app:layout_constraintStart_toStartOf="@+id/o43"
-                            app:layout_constraintTop_toBottomOf="@+id/o43"
-                            android:textSize="8sp"/>
-
-                        <TextView
-                            android:id="@+id/frw4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="270dp"
-                            android:layout_marginEnd="50dp"
+                            android:layout_marginStart="240dp"
+                            android:layout_marginEnd="10dp"
                             android:text="$541"
                             android:textStyle="bold"
-                            android:gravity="center_horizontal"
                             android:textColor="#295682"
-                            app:layout_constraintStart_toEndOf="@+id/ttl41"
+                            app:layout_constraintStart_toEndOf="@+id/ttl3"
                             android:textSize="14sp"/>
                         <TextView
-                            android:id="@+id/time42"
+                            android:id="@+id/line3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="10:44AM "
-                            android:layout_marginTop="10dp"
-                            android:layout_marginStart="-10dp"
-                            android:textColor="@color/black"
-                            app:layout_constraintStart_toStartOf="@+id/frw4"
-                            app:layout_constraintTop_toBottomOf="@+id/frw4"
+                            android:text="______________________________________________________"
+                            android:textStyle="bold"
+                            android:layout_marginTop="-7dp"
+                            app:layout_constraintTop_toBottomOf="@+id/ttl3"
+                            app:layout_constraintStart_toStartOf="@+id/ttl3"
                             android:textSize="14sp"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintTop_toBottomOf="@+id/line3"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Bill number"
+                                    android:layout_marginTop="10dp"
+                                    android:textSize="16sp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/due_date"
+                                    android:layout_marginStart="180dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="30dp"
+                                    android:textSize="16sp"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="201832479"
+                                    android:layout_marginTop="1dp"
+                                    android:textSize="12sp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="09/04/2019"
+                                    android:layout_marginStart="200dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginEnd="30dp"
+                                    android:textSize="12sp"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Used Unit"
+                                    android:layout_marginTop="12dp"
+                                    android:textSize="16sp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Status"
+                                    android:layout_marginStart="200dp"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_marginEnd="30dp"
+                                    android:textSize="16sp"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="50"
+                                    android:layout_marginTop="1dp"
+                                    android:textSize="12sp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="pending"
+                                    android:layout_marginStart="260dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginEnd="30dp"
+                                    android:textSize="12sp"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
 
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="5dp"
+                        android:layout_marginStart="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                        <TextView
+                            android:id="@+id/ttl4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mar,2019"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"/>
+                        <TextView
+                            android:id="@+id/frw4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="240dp"
+                            android:layout_marginEnd="10dp"
+                            android:text="$541"
+                            android:textStyle="bold"
+                            android:textColor="#295682"
+                            app:layout_constraintStart_toEndOf="@+id/ttl4"
+                            android:textSize="14sp"/>
+                        <TextView
+                            android:id="@+id/line4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="______________________________________________________"
+                            android:textStyle="bold"
+                            android:layout_marginTop="-7dp"
+                            app:layout_constraintTop_toBottomOf="@+id/ttl4"
+                            app:layout_constraintStart_toStartOf="@+id/ttl4"
+                            android:textSize="14sp"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintTop_toBottomOf="@+id/line4"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Bill number"
+                                    android:layout_marginTop="10dp"
+                                    android:textSize="16sp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/due_date"
+                                    android:layout_marginStart="180dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="30dp"
+                                    android:textSize="16sp"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="201832479"
+                                    android:layout_marginTop="1dp"
+                                    android:textSize="12sp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="09/04/2019"
+                                    android:layout_marginStart="200dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginEnd="30dp"
+                                    android:textSize="12sp"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Used Unit"
+                                    android:layout_marginTop="12dp"
+                                    android:textSize="16sp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Status"
+                                    android:layout_marginStart="200dp"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_marginEnd="30dp"
+                                    android:textSize="16sp"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="50"
+                                    android:layout_marginTop="1dp"
+                                    android:textSize="12sp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="pending"
+                                    android:layout_marginStart="260dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginEnd="30dp"
+                                    android:textSize="12sp"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
             </LinearLayout>
         </ScrollView>
 
@@ -844,7 +625,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:id="@+id/bottom_navigation"
-        android:layout_marginTop="-60dp"
+        android:layout_marginTop="-50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -881,7 +662,6 @@
                 android:backgroundTint="@android:color/transparent"
                 android:layout_marginStart="20dp"
                 android:id="@+id/searchCard"
-                android:clickable="true"
                 app:layout_constraintEnd_toEndOf="parent">
                 <LinearLayout
                     android:layout_width="match_parent"
